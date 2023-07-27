@@ -28,7 +28,7 @@ class _QuizState extends State<Quiz> {
   void chooseAnswer(String answer) {
     selectedAnswer.add(answer);
     if (selectedAnswer.length == questions.length) {
-      selectedAnswer = [];
+      
 
       setState(() {
         activeScreen = 'Result-screen';
@@ -48,7 +48,7 @@ class _QuizState extends State<Quiz> {
 
     if(activeScreen == 'Result-screen'){
 
-      screenWidget = const ResultScreen();
+      screenWidget =  ResultScreen(chooseAnswer: selectedAnswer,);
 
     }
 
